@@ -1,18 +1,19 @@
 import React from 'react';
-import { 
-  Bus, 
-  Calendar, 
-  Users, 
-  MapPin, 
-  Phone, 
-  Settings, 
-  BarChart3, 
+import {
+  Calendar,
+  Users,
+  MapPin,
+  Phone,
+  Settings,
+  BarChart3,
   Shield,
   LogOut,
+  Bus,
   Sparkles,
   Zap
 } from 'lucide-react';
 import { User } from '../../types';
+import logo from '../logo.jpeg';
 
 interface SidebarProps {
   user: User;
@@ -42,14 +43,9 @@ const Sidebar: React.FC<SidebarProps> = ({ user, activeTab, onTabChange, onLogou
       
       <div className="p-6 border-b border-slate-700/50 relative">
         <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300 relative">
-            <Bus className="w-7 h-7 text-white" />
-            <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-              <Sparkles className="w-2 h-2 text-white" />
-            </div>
-          </div>
+          <img src={logo} alt="Logo" className="w-12 h-12 object-contain" />
           <div>
-            <h1 className="text-xl font-bold text-white">UEM Transport</h1>
+            <h1 className="text-xl font-bold text-white">UEM Daily Convenience</h1>
             <p className="text-sm text-slate-400">Advanced Management</p>
           </div>
         </div>

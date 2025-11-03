@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Bus, User, Lock, Eye, EyeOff, Sparkles, Shield } from 'lucide-react';
+import { User, Lock, Eye, EyeOff, Sparkles, Shield } from 'lucide-react';
 import { User as UserType } from '../../types';
 import { authService, TokenManager } from '../../services';
+import logo from '../logo.jpeg';
 
 interface LoginFormProps {
   onLogin: (user: UserType) => void;
@@ -46,13 +47,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
           
           {/* Header */}
           <div className="text-center mb-8 relative z-10">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform hover:scale-105 transition-transform duration-300 relative">
-              <Bus className="w-10 h-10 text-white" />
-              <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                <Sparkles className="w-3 h-3 text-white" />
-              </div>
-            </div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">UEM Transport System</h1>
+            <img src={logo} alt="Logo" className="w-20 h-20 object-contain mx-auto mb-4" />
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">UEM Daily Convenience</h1>
             <p className="text-gray-600 font-medium">Advanced Bus Management Portal</p>
             <div className="flex items-center justify-center space-x-1 mt-2">
               <Shield className="w-4 h-4 text-green-500" />
