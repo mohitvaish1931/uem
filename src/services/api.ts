@@ -1,5 +1,5 @@
 // API base configuration
-const API_BASE_URL = 'https://uem-backend-lqej.onrender.com';
+const API_BASE_URL = 'https://uem-backend-lqej.onrender.com/api';
 
 // Token management
 class TokenManager {
